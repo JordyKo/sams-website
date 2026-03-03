@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Portfolio | Wellen</title>
+    <meta name="description"
+        content="Explore Wellen's portfolio of successfully managed STP sites across industrial, commercial, hospital, and residential sectors.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,12 +15,15 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-seedling"></i> Wellen</a>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Wellen Logo" class="logo-img">
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Expertise</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html" class="active">Portfolio</a></li>
+                    <li><a href="quality-policy.html">Quality Policy</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -29,50 +34,141 @@
     <main>
         <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
             <div class="container">
-                <h1>Sites We <span>Optimize.</span></h1>
-                <p>Delivering consistent results across diverse industrial and residential environments.</p>
+                <span class="section-label">Our Track Record</span>
+                <h1>Sites We <span>Optimise.</span></h1>
+                <p>Delivering measurable, consistent results across industrial plants, hospitals, commercial complexes,
+                    and residential communities. Every project is a long-term partnership.</p>
             </div>
         </section>
 
         <section class="portfolio">
             <div class="container">
                 <div class="grid grid-3">
+
+                    <!-- Project 1 -->
                     <div class="card" style="padding: 0; overflow: hidden;">
-                        <div
-                            style="height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center;">
-                            [Industry Project Image]</div>
+                        <div class="project-img-slot">
+                            <i class="fas fa-industry"></i>
+                            <span class="slot-label">📷 Project Photo — Industrial Site</span>
+                        </div>
                         <div style="padding: 1.5rem;">
-                            <span
-                                style="font-size: 0.75rem; color: var(--primary-light); font-weight: 700; text-transform: uppercase;">Industrial</span>
-                            <h3 style="margin-top: 0.5rem;">Global Auto Components</h3>
-                            <p style="font-size: 0.875rem; color: var(--text-muted);">Operation of 250 KLD MBR Plant.
-                                Achieved 15% reduction in blower energy consumption.</p>
+                            <span class="project-tag">Industrial</span>
+                            <h3>Global Auto Components</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Full O&amp;M
+                                takeover of a 250 KLD MBR plant serving a large-scale automotive manufacturing facility.
+                                Wellen identified and corrected blower over-pressurisation issues within seven days,
+                                delivering a sustained 15% reduction in energy consumption and eliminating quarterly
+                                maintenance shutdowns.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> 250 KLD MBR</span>
+                                <span><i class="fas fa-bolt"></i> 15% Energy Saved</span>
+                                <span><i class="fas fa-calendar-check"></i> AMC Contract</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 2 -->
                     <div class="card" style="padding: 0; overflow: hidden;">
-                        <div
-                            style="height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center;">
-                            [Hospital Project Image]</div>
+                        <div class="project-img-slot">
+                            <i class="fas fa-hospital"></i>
+                            <span class="slot-label">📷 Project Photo — Hospital Site</span>
+                        </div>
                         <div style="padding: 1.5rem;">
-                            <span
-                                style="font-size: 0.75rem; color: var(--primary-light); font-weight: 700; text-transform: uppercase;">Commercial</span>
-                            <h3 style="margin-top: 0.5rem;">City Hope Hospital</h3>
-                            <p style="font-size: 0.875rem; color: var(--text-muted);">Complete management of medical
-                                wastewater treatment with 100% compliance records.</p>
+                            <span class="project-tag">Healthcare</span>
+                            <h3>City Hope Hospital</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Complete
+                                management of medical-grade wastewater treatment in compliance with SPCB discharge
+                                norms. Wellen implemented a rigorous daily testing protocol and achieved a 100% clean
+                                compliance record across 36 consecutive months of operation.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> 150 KLD SBR</span>
+                                <span><i class="fas fa-shield-alt"></i> 100% Compliant</span>
+                                <span><i class="fas fa-calendar-check"></i> 3+ Years</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 3 -->
                     <div class="card" style="padding: 0; overflow: hidden;">
-                        <div
-                            style="height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center;">
-                            [Residential Project Image]</div>
+                        <div class="project-img-slot">
+                            <i class="fas fa-building"></i>
+                            <span class="slot-label">📷 Project Photo — Residential Site</span>
+                        </div>
                         <div style="padding: 1.5rem;">
-                            <span
-                                style="font-size: 0.75rem; color: var(--primary-light); font-weight: 700; text-transform: uppercase;">Residential</span>
-                            <h3 style="margin-top: 0.5rem;">Orchid Heights Luxury</h3>
-                            <p style="font-size: 0.875rem; color: var(--text-muted);">AMC for 100 KLD MBBR plant.
-                                Resolved long-standing odor issues within 48 hours of takeover.</p>
+                            <span class="project-tag">Residential</span>
+                            <h3>Orchid Heights Luxury</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">AMC for a 100
+                                KLD MBBR plant serving a premium residential community. Upon takeover, persistent odour
+                                complaints from residents were fully resolved within 48 hours through media
+                                re-inoculation and aeration re-balancing — restoring resident confidence and improving
+                                treated water reuse for landscaping.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> 100 KLD MBBR</span>
+                                <span><i class="fas fa-smile"></i> Odour Resolved</span>
+                                <span><i class="fas fa-recycle"></i> Water Reuse</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 4 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div class="project-img-slot">
+                            <i class="fas fa-shopping-mall"></i>
+                            <span class="slot-label">📷 Project Photo — Commercial Site</span>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <span class="project-tag">Commercial</span>
+                            <h3>Nexus Commercial Complex</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Performance
+                                audit and subsequent AMC for a 200 KLD plant at a multi-tenanted commercial hub.
+                                Wellen's audit uncovered an undersized equilisation tank contributing to erratic
+                                effluent quality — structural correction improved BOD removal efficiency by 22%.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> 200 KLD</span>
+                                <span><i class="fas fa-chart-line"></i> 22% BOD Improvement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div class="project-img-slot">
+                            <i class="fas fa-seedling"></i>
+                            <span class="slot-label">📷 Project Photo — Latest Project</span>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <span class="project-tag">Industrial</span>
+                            <h3>[ Latest Project ]</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Add your
+                                latest project details here — including plant type, capacity, the challenge faced, and
+                                the results Wellen delivered. This card is a placeholder ready for your newest success
+                                story.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> [ Capacity ] KLD</span>
+                                <span><i class="fas fa-cog"></i> [ Technology ]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div class="project-img-slot">
+                            <i class="fas fa-plus-circle"></i>
+                            <span class="slot-label">📷 Project Photo — Add New</span>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <span class="project-tag">[ Sector ]</span>
+                            <h3>[ Project Name ]</h3>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">Describe the
+                                scope, challenge, and outcome of this project here. Replace this placeholder with a real
+                                project once you have the details and photo ready.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-tint"></i> [ Capacity ]</span>
+                                <span><i class="fas fa-cog"></i> [ Technology ]</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -80,11 +176,43 @@
 
     <footer>
         <div class="container">
-            <div style="text-align: center; color: #64748b; font-size: 0.875rem;">
-                &copy; 2024 Wellen Specialists.
+            <div class="footer-grid">
+                <div>
+                    <img src="logo.png" alt="Wellen" class="footer-logo-img">
+                    <p class="footer-tagline">Optimising the world's most vital resource through engineering excellence
+                        and sustainable operations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Expertise</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="quality-policy.html">Quality Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="contact.html">Get a Quote</a></li>
+                        <li><a href="contact.html">Schedule Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Innovation Drive,
+                            Bangalore - 560001</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 80 5555 1234</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>solutions@wellen.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Wellen Specialists. Professional Sewage Treatment Plant Management.
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 

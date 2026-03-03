@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Wellen</title>
+    <meta name="description"
+        content="Wellen offers comprehensive STP O&M services including AMC, performance audits, lab testing, remote monitoring, and plant retrofitting.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,12 +15,15 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-seedling"></i> Wellen</a>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Wellen Logo" class="logo-img">
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Expertise</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="quality-policy.html">Quality Policy</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -29,44 +34,121 @@
     <main>
         <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
             <div class="container">
-                <h1>Full-Spectrum <span>Operations.</span></h1>
-                <p>Tailored maintenance strategies for industrial, commercial, and residential treatment plants.</p>
+                <span class="section-label">What We Offer</span>
+                <h1>Full-Spectrum <span>O&amp;M Services.</span></h1>
+                <p>Bespoke maintenance and operational strategies designed for industrial complexes, hospitals,
+                    commercial hubs, and residential communities — all backed by a single point of accountability.</p>
             </div>
         </section>
 
         <section class="services-grid">
             <div class="container">
                 <div class="grid grid-3">
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-file-contract"></i></div>
-                        <h3>Annual Maintenance (AMC)</h3>
-                        <p>Comprehensive yearly contracts covering labor, consumables, and emergency support.</p>
+                        <h3>Annual Maintenance Contract (AMC)</h3>
+                        <p>Our flagship offering — a comprehensive yearly contract that gives your facility a dedicated
+                            operations team without the overhead of in-house staffing.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>Scheduled preventive maintenance visits</li>
+                                <li>Emergency breakdown response (24/7 for critical clients)</li>
+                                <li>Consumables supply management (chemicals, media)</li>
+                                <li>Monthly performance and compliance reports</li>
+                                <li>Regulatory submission support (PCB/CPCB)</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Get AMC Quote <i class="fas fa-arrow-right"></i></a>
                     </div>
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-chart-line"></i></div>
                         <h3>Performance Audits</h3>
-                        <p>Deep-dive assessments to identify inefficiencies and improve water reclamation rates.</p>
+                        <p>A forensic review of your plant's health — identifying hidden inefficiencies, compliance
+                            gaps, and equipment risks before they escalate into costly problems.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>Inlet/outlet water quality benchmarking</li>
+                                <li>Equipment condition and remaining life assessment</li>
+                                <li>Energy consumption mapping (specific energy analysis)</li>
+                                <li>Process flow and hydraulics review</li>
+                                <li>Detailed audit report with actionable recommendations</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Book an Audit <i class="fas fa-arrow-right"></i></a>
                     </div>
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-vial"></i></div>
-                        <h3>Laboratory Testing</h3>
-                        <p>Certified testing of Inlet and Outlet parameters (BOD, COD, TSS) to ensure compliance.</p>
+                        <h3>Laboratory Testing &amp; Compliance</h3>
+                        <p>Certified analytical testing of treated effluent parameters, delivered with the documentation
+                            you need to stay ahead of regulatory agencies.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>BOD, COD, TSS, TDS, pH, and Faecal Coliform testing</li>
+                                <li>Testing at NABL-accredited partner laboratories</li>
+                                <li>Inlet vs. outlet comparison reporting</li>
+                                <li>Trend analysis and early-warning alerts</li>
+                                <li>Regulatory filing support (Form V, annual returns)</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Enquire Now <i class="fas fa-arrow-right"></i></a>
                     </div>
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-user-shield"></i></div>
                         <h3>Operational Staffing</h3>
-                        <p>Providing trained on-site operators and technicians for 24/7 plant management.</p>
+                        <p>Supplying trained, certified plant operators and supervisors for short-term covers, long-term
+                            deployment, or full-time on-site management.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>ITI / Diploma-qualified STP operators</li>
+                                <li>Shift-based and 24/7 staffing models</li>
+                                <li>On-the-job training and upskilling programs</li>
+                                <li>Supervision by resident Wellen engineer</li>
+                                <li>Attendance, log-book, and compliance monitoring</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Request Staffing <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-sync-alt"></i></div>
-                        <h3>Retrofitting & Upgrades</h3>
-                        <p>Converting old STPs into modern, high-efficiency systems with minimal downtime.</p>
+                        <h3>Retrofitting &amp; Upgrades</h3>
+                        <p>Breathing new life into ageing infrastructure — we assess, design, and execute technology
+                            upgrades that maximise treatment efficiency with minimal downtime.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>Conversion to modern MBR / MBBR / SBR technology</li>
+                                <li>Aeration system upgrades (energy-efficient blowers)</li>
+                                <li>Sludge dewatering system improvement</li>
+                                <li>SCADA and control panel upgrades</li>
+                                <li>Capacity augmentation studies and execution</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Discuss Upgrades <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
+
                     <div class="card">
                         <div class="icon"><i class="fas fa-mobile-alt"></i></div>
                         <h3>Remote Monitoring</h3>
-                        <p>Real-time IoT-based tracking of plant health and water quality parameters.</p>
+                        <p>Real-time, IoT-enabled plant surveillance — giving you and our engineers instant visibility
+                            into critical parameters from anywhere, at any time.</p>
+                        <div class="service-card-body">
+                            <ul>
+                                <li>Online sensor integration (DO, pH, turbidity, flow)</li>
+                                <li>Automated alerts for parameter deviations</li>
+                                <li>Centralised cloud dashboard with historical data</li>
+                                <li>Remote diagnostics and on-call intervention</li>
+                                <li>Monthly IoT health and reliability reports</li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -74,11 +156,43 @@
 
     <footer>
         <div class="container">
-            <div style="text-align: center; color: #64748b; font-size: 0.875rem;">
-                &copy; 2024 Wellen Specialists.
+            <div class="footer-grid">
+                <div>
+                    <img src="logo.png" alt="Wellen" class="footer-logo-img">
+                    <p class="footer-tagline">Optimising the world's most vital resource through engineering excellence
+                        and sustainable operations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Expertise</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="quality-policy.html">Quality Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="contact.html">Get a Quote</a></li>
+                        <li><a href="contact.html">Schedule Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Innovation Drive,
+                            Bangalore - 560001</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 80 5555 1234</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>solutions@wellen.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Wellen Specialists. Professional Sewage Treatment Plant Management.
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 

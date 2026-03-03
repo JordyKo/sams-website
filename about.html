@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Expertise | Wellen</title>
+    <meta name="description"
+        content="Learn how Wellen's engineering-first approach to STP operations delivers unrivalled compliance, efficiency, and plant longevity.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,12 +15,15 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-seedling"></i> Wellen</a>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Wellen Logo" class="logo-img">
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">Expertise</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="quality-policy.html">Quality Policy</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -27,42 +32,87 @@
     </header>
 
     <main>
+        <!-- PAGE HERO -->
         <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
             <div class="container">
+                <span class="section-label">Who We Are</span>
                 <h1>Beyond Maintenance: <span>Operational Excellence.</span></h1>
-                <p>Ensuring your sewage treatment infrastructure operates at peak performance, day in and day out.</p>
+                <p>We don't just service plants — we take ownership of outcomes. Wellen's engineers are accountable for
+                    every litre that leaves your facility.</p>
             </div>
         </section>
 
+        <!-- ENGINEERING APPROACH -->
         <section class="expertise-details">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
                     <div>
+                        <span class="section-label">Our Philosophy</span>
                         <h2>Engineering-First Approach</h2>
-                        <p>At Wellen, we don't just "fix" things. We manage complete lifecycles. Our team consists
-                            of environmental engineers and technical specialists who understand the chemistry and
-                            biology behind water treatment.</p>
-                        <p>From MBR to MBBR and SBR systems, our expertise spans across all modern treatment
-                            technologies, ensuring that every drop of water meets the highest discharge standards.</p>
+                        <p style="margin-top: 1rem; color: var(--text-muted);">At Wellen, we don't just "fix" things —
+                            we manage complete asset lifecycles. Our team of environmental engineers and technical
+                            specialists understands the chemistry, microbiology, and mechanical systems behind modern
+                            water treatment.</p>
+                        <p style="margin-top: 1rem; color: var(--text-muted);">From MBR to MBBR and SBR systems, our
+                            expertise spans all major treatment technologies. Every drop of treated water that leaves a
+                            Wellen-managed site meets or exceeds the applicable discharge standards.</p>
                         <div style="margin-top: 2rem;">
-                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle" style="color: var(--primary-light);"></i>
-                                <span>100% PCB Regulatory Compliance</span>
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-light); margin-top: 0.15rem;"></i>
+                                <span>100% PCB &amp; CPCB Regulatory Compliance Record</span>
                             </div>
-                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                                <i class="fas fa-check-circle" style="color: var(--primary-light);"></i>
-                                <span>Advanced Biological Monitoring</span>
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-light); margin-top: 0.15rem;"></i>
+                                <span>Advanced Biological &amp; Chemical Monitoring Protocols</span>
                             </div>
-                            <div style="display: flex; gap: 1rem;">
-                                <i class="fas fa-check-circle" style="color: var(--primary-light);"></i>
-                                <span>Digital Asset Performance Tracking</span>
+                            <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-light); margin-top: 0.15rem;"></i>
+                                <span>Digital Asset Performance Tracking &amp; Reporting</span>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <i class="fas fa-check-circle"
+                                    style="color: var(--primary-light); margin-top: 0.15rem;"></i>
+                                <span>Certified, Trained On-Site Operators &amp; Engineers</span>
                             </div>
                         </div>
                     </div>
                     <div
-                        style="background: var(--accent-bg); height: 400px; border-radius: var(--radius); overflow: hidden;">
+                        style="background: var(--accent-bg); height: 420px; border-radius: var(--radius); overflow: hidden;">
                         <img src="C:\Users\DESKTOP\.gemini\antigravity\brain\ac499e18-638f-4209-9366-a0d9d797509b\industrial_stp_project_1771501103354.png"
                             alt="O&M Expertise" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALITY POLICY SUMMARY -->
+        <section class="about-quality-section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <!-- Certificate Placeholder -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                        <div class="cert-placeholder" style="width: 100%; max-width: 340px; height: 260px;">
+                            <i class="fas fa-certificate"></i>
+                            <span>📎 Add your ISO / Certification image here</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Replace this
+                            placeholder with your quality certificate image</p>
+                    </div>
+                    <div>
+                        <span class="section-label">Quality Commitment</span>
+                        <h2>Our Quality Policy</h2>
+                        <p style="margin-top: 1rem; color: var(--text-muted);">Wellen is committed to delivering
+                            consistently high-quality STP operations and maintenance services that meet client
+                            expectations and satisfy all applicable regulatory and statutory requirements.</p>
+                        <p style="margin-top: 1rem; color: var(--text-muted);">We continuously improve our processes,
+                            build the capability of our people, and leverage technology to raise the standard of water
+                            treatment management across every site we operate.</p>
+                        <div style="margin-top: 2rem;">
+                            <a href="quality-policy.html" class="btn btn-primary">Read Full Quality Policy</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,11 +121,43 @@
 
     <footer>
         <div class="container">
-            <div style="text-align: center; color: #64748b; font-size: 0.875rem;">
-                &copy; 2024 Wellen Specialists. Professional Sewage Treatment Plant Management.
+            <div class="footer-grid">
+                <div>
+                    <img src="logo.png" alt="Wellen" class="footer-logo-img">
+                    <p class="footer-tagline">Optimising the world's most vital resource through engineering excellence
+                        and sustainable operations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Expertise</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="quality-policy.html">Quality Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="contact.html">Get a Quote</a></li>
+                        <li><a href="contact.html">Schedule Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Innovation Drive,
+                            Bangalore - 560001</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 80 5555 1234</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>solutions@wellen.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Wellen Specialists. Professional Sewage Treatment Plant Management.
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 

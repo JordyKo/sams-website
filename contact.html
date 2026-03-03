@@ -13,12 +13,15 @@
     <header>
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-seedling"></i> Wellen</a>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Wellen Logo" class="logo-img">
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">Expertise</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html">Portfolio</a></li>
+                    <li><a href="quality-policy.html">Quality Policy</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
                 <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
@@ -29,8 +32,10 @@
     <main>
         <section class="hero" style="padding-top: 8rem; padding-bottom: 4rem;">
             <div class="container">
-                <h1>Ready for <span>Better O&M?</span></h1>
-                <p>Contact us for a free site audit or a custom quote for your treatment plant.</p>
+                <span class="section-label">Let's Talk</span>
+                <h1>Ready for <span>Better O&amp;M?</span></h1>
+                <p>Tell us about your plant and we'll get back to you within one business day with a personalised
+                    proposal — no obligation, no pressure.</p>
             </div>
         </section>
 
@@ -38,14 +43,25 @@
             <div class="container">
                 <div class="hero-grid" style="align-items: flex-start;">
                     <div class="card">
-                        <h3>Schedule an Audit</h3>
+                        <h3>Schedule a Free Site Audit</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Fill in the form
+                            below and one of our senior engineers will reach out to arrange a no-cost, no-commitment
+                            site assessment.</p>
                         <form id="contactForm" style="margin-top: 1.5rem;">
                             <div style="margin-bottom: 1.25rem;">
                                 <label
                                     style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Company
+                                    / Organisation Name</label>
+                                <input type="text" placeholder="Your organisation"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;"
+                                    required>
+                            </div>
+                            <div style="margin-bottom: 1.25rem;">
+                                <label
+                                    style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Your
                                     Name</label>
-                                <input type="text" placeholder="Your organization"
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;"
+                                <input type="text" placeholder="Full name"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;"
                                     required>
                             </div>
                             <div style="margin-bottom: 1.25rem;">
@@ -53,45 +69,65 @@
                                     style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Email
                                     Address</label>
                                 <input type="email" placeholder="email@company.com"
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;"
                                     required>
+                            </div>
+                            <div style="margin-bottom: 1.25rem;">
+                                <label
+                                    style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Phone
+                                    Number</label>
+                                <input type="tel" placeholder="+91 XXXXX XXXXX"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;">
                             </div>
                             <div style="margin-bottom: 1.25rem;">
                                 <label
                                     style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">Plant
                                     Capacity (KLD)</label>
                                 <input type="number" placeholder="e.g. 100"
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit;">
                             </div>
                             <div style="margin-bottom: 1.5rem;">
                                 <label
                                     style="display: block; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">How
                                     can we help?</label>
-                                <textarea rows="4" placeholder="Describe your current challenges..."
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px;"
+                                <textarea rows="4" placeholder="Briefly describe your current challenges..."
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 8px; font-family: inherit; resize: vertical;"
                                     required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary"
-                                style="width: 100%; justify-content: center;">Submit Quote Request</button>
+                                style="width: 100%; justify-content: center;">Submit Enquiry &nbsp;<i
+                                    class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
-                    <div style="padding-top: 2rem;">
-                        <h3>Headquarters</h3>
-                        <p style="margin-top: 1rem; color: var(--text-muted);"><i class="fas fa-map-marker-alt"
-                                style="margin-right: 0.75rem; color: var(--primary-light);"></i> 123 Innovation Drive,
-                            Industrial Area Ph II, Bangalore - 560001</p>
-                        <p style="margin-top: 1rem; color: var(--text-muted);"><i class="fas fa-phone-alt"
-                                style="margin-right: 0.75rem; color: var(--primary-light);"></i> +91 80 5555 1234</p>
-                        <p style="margin-top: 1rem; color: var(--text-muted);"><i class="fas fa-envelope"
-                                style="margin-right: 0.75rem; color: var(--primary-light);"></i>
-                            solutions@wellen.com</p>
 
+                    <div style="padding-top: 1rem;">
+                        <h3>Our Headquarters</h3>
+                        <p style="margin-top: 0.5rem; color: var(--text-muted); font-size: 0.9rem;">We're based in
+                            Bangalore and serve clients across South India.</p>
+                        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+                            <div class="footer-contact-item" style="color: var(--text-color);">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary-light);"></i>
+                                <span>123 Innovation Drive, Industrial Area Ph II, Bangalore – 560001</span>
+                            </div>
+                            <div class="footer-contact-item" style="color: var(--text-color);">
+                                <i class="fas fa-phone-alt" style="color: var(--primary-light);"></i>
+                                <span>+91 80 5555 1234</span>
+                            </div>
+                            <div class="footer-contact-item" style="color: var(--text-color);">
+                                <i class="fas fa-envelope" style="color: var(--primary-light);"></i>
+                                <span>solutions@wellen.com</span>
+                            </div>
+                        </div>
                         <div
-                            style="margin-top: 3rem; background: var(--accent-bg); padding: 2rem; border-radius: var(--radius);">
+                            style="margin-top: 2.5rem; background: var(--accent-bg); padding: 2rem; border-radius: var(--radius); border-left: 4px solid var(--primary-light);">
                             <h4 style="color: var(--primary-dark);">Support Hours</h4>
-                            <p style="font-size: 0.875rem; margin-top: 0.5rem;">24/7 Emergency Support for AMC Customers
-                            </p>
-                            <p style="font-size: 0.875rem;">Office: Mon - Sat (9 AM - 7 PM)</p>
+                            <p style="font-size: 0.875rem; margin-top: 0.75rem; color: var(--text-muted);"><strong
+                                    style="color: var(--text-color);">Emergency (AMC Clients):</strong> 24 / 7 / 365</p>
+                            <p style="font-size: 0.875rem; margin-top: 0.5rem; color: var(--text-muted);"><strong
+                                    style="color: var(--text-color);">Office Hours:</strong> Mon – Sat, 9 AM – 7 PM</p>
+                            <p style="font-size: 0.875rem; margin-top: 0.5rem; color: var(--text-muted);"><strong
+                                    style="color: var(--text-color);">New Enquiries:</strong> Response within 1 business
+                                day</p>
                         </div>
                     </div>
                 </div>
@@ -101,11 +137,43 @@
 
     <footer>
         <div class="container">
-            <div style="text-align: center; color: #64748b; font-size: 0.875rem;">
-                &copy; 2024 Wellen Specialists.
+            <div class="footer-grid">
+                <div>
+                    <img src="logo.png" alt="Wellen" class="footer-logo-img">
+                    <p class="footer-tagline">Optimising the world's most vital resource through engineering excellence
+                        and sustainable operations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Expertise</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="quality-policy.html">Quality Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="contact.html">Get a Quote</a></li>
+                        <li><a href="contact.html">Schedule Audit</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Innovation Drive,
+                            Bangalore - 560001</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 80 5555 1234</span></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>solutions@wellen.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Wellen Specialists. Professional Sewage Treatment Plant Management.
             </div>
         </div>
     </footer>
+
     <script src="main.js"></script>
 </body>
 
