@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ─── Mobile Nav Toggle ────────────────────────────────────────────
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
 
     if (mobileToggle) {
         mobileToggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            if (!isOpen) {
                 navLinks.style.flexDirection = 'column';
                 navLinks.style.position = 'absolute';
                 navLinks.style.top = '80px';
@@ -13,54 +16,106 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.width = '100%';
                 navLinks.style.backgroundColor = '#fff';
                 navLinks.style.padding = '1rem';
-                navLinks.style.boxShadow = '0 10px 10px rgba(0,0,0,0.1)';
+                navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
             }
         });
     }
 
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your inquiry! One of our engineers will contact you shortly.');
-            contactForm.reset();
-        });
-    }
+    // ─── Header Shadow on Scroll ──────────────────────────────────────
+    const header = document.querySelector('header');
+    const onScroll = () => {
+        if (header) {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        }
+        // Show/hide back-to-top
+        if (backToTop) {
+            backToTop.classList.toggle('show', window.scrollY > 300);
+        }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    // Impact Meter Animation
+    // ─── Back to Top Button ───────────────────────────────────────────
+    const backToTop = document.createElement('button');
+    backToTop.className = 'back-to-top';
+    backToTop.setAttribute('aria-label', 'Back to top');
+    backToTop.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    document.body.appendChild(backToTop);
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ─── Scroll Fade-in Animations ────────────────────────────────────
+    const fadeTargets = document.querySelectorAll(
+        '.card, .stat-item, .testimonial-card, .pillar-card, .carousel-header, .policy-statement, .policy-intro'
+    );
+    fadeTargets.forEach((el, i) => {
+        el.classList.add('fade-in');
+        // Stagger cards in the same grid
+        const delay = (i % 3) + 1;
+        if (delay <= 3) el.classList.add(`delay-${delay}`);
+    });
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    fadeTargets.forEach(el => fadeObserver.observe(el));
+
+    // ─── Count-Up Animation (triggered on scroll) ─────────────────────
     const animateNumbers = () => {
         const counters = document.querySelectorAll('.count-up');
-        const speed = 200; // Animation speed
-
+        const speed = 200;
         counters.forEach(counter => {
-            const updateCount = () => {
-                const target = parseFloat(counter.getAttribute('data-target'));
-                const count = parseFloat(counter.innerText) || 0;
-
-                // For smaller numbers like 8, we need a larger increment step so it doesn't get stuck
-                const inc = Math.max(target / speed, 0.1);
-
+            const target = parseFloat(counter.getAttribute('data-target'));
+            let count = 0;
+            const inc = Math.max(target / speed, 0.1);
+            const tick = () => {
+                count += inc;
                 if (count < target) {
-                    const nextCount = count + inc;
-                    counter.innerText = nextCount >= target ? target : nextCount.toFixed(1).replace(/\.0$/, '');
-                    setTimeout(updateCount, 15);
+                    counter.innerText = count.toFixed(1).replace(/\.0$/, '');
+                    requestAnimationFrame(tick);
                 } else {
                     counter.innerText = target;
                 }
             };
-            updateCount();
+            tick();
         });
     };
 
-    // Trigger animation when impact section is in view
     const impactSection = document.querySelector('.impact');
     if (impactSection) {
-        const observer = new IntersectionObserver((entries) => {
+        const impactObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 animateNumbers();
-                observer.unobserve(impactSection);
+                impactObserver.unobserve(impactSection);
             }
         }, { threshold: 0.5 });
-        observer.observe(impactSection);
+        impactObserver.observe(impactSection);
     }
+
+    // ─── Contact Form — Styled Success State ─────────────────────────
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        // Inject success message div after the form
+        const successMsg = document.createElement('div');
+        successMsg.className = 'form-success';
+        successMsg.innerHTML = `
+            <i class="fas fa-check-circle"></i>
+            <strong>Enquiry Received!</strong>
+            <p>One of our senior engineers will get back to you within one business day.</p>
+        `;
+        contactForm.parentNode.insertBefore(successMsg, contactForm.nextSibling);
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            contactForm.style.display = 'none';
+            successMsg.classList.add('show');
+        });
+    }
+
 });
