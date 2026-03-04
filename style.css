@@ -860,40 +860,54 @@ nav {
    FOOTER
    ============================================= */
 footer {
-    background: #0f172a;
+    background: #0b1420;
     color: var(--white);
     padding: 5rem 0 2rem;
+    border-top: 3px solid var(--primary-color);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(163, 230, 53, 0.15);
+    border-radius: 14px;
+    padding: 10px 14px;
+    margin-bottom: 1.5rem;
 }
 
 .footer-logo-img {
-    height: 72px;
+    height: 68px;
     width: auto;
     object-fit: contain;
-    margin-bottom: 1.25rem;
     display: block;
     mix-blend-mode: screen;
 }
 
 .footer-tagline {
     color: #94a3b8;
-    max-width: 280px;
-    font-size: 0.9rem;
-    line-height: 1.7;
+    max-width: 290px;
+    font-size: 0.875rem;
+    line-height: 1.75;
 }
 
 .footer-links h4 {
-    color: var(--white);
+    color: var(--primary-light);
     margin-bottom: 1.25rem;
-    font-size: 0.95rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
+    font-weight: 700;
 }
 
 .footer-links ul {
@@ -901,41 +915,44 @@ footer {
 }
 
 .footer-links li {
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.7rem;
 }
 
 .footer-links a {
     color: #94a3b8;
     text-decoration: none;
-    transition: var(--transition);
-    font-size: 0.9rem;
+    transition: color 0.2s, padding-left 0.2s;
+    font-size: 0.875rem;
 }
 
 .footer-links a:hover {
-    color: var(--primary-light);
+    color: var(--white);
+    padding-left: 4px;
 }
 
 .footer-contact-item {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
     color: #94a3b8;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
 }
 
 .footer-contact-item i {
     color: var(--primary-light);
-    margin-top: 0.15rem;
+    margin-top: 0.2rem;
     flex-shrink: 0;
+    width: 14px;
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid #1e293b;
     padding-top: 2rem;
-    color: #64748b;
-    font-size: 0.875rem;
+    margin-top: 2rem;
+    color: #475569;
+    font-size: 0.8rem;
 }
 
 /* =============================================
