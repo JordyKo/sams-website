@@ -97,14 +97,16 @@ nav {
 }
 
 .logo-text {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 900;
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, #065F46, #10B981);
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #059669 0%, #10B981 50%, #a3e635 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
+    text-shadow: none;
+    font-family: 'Inter', 'Arial Black', sans-serif;
 }
 
 .nav-links {
