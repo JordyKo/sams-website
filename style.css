@@ -91,7 +91,7 @@ nav {
 }
 
 .logo-img {
-    height: 44px;
+    height: 42px;
     width: auto;
     object-fit: contain;
 }
@@ -99,11 +99,8 @@ nav {
 .logo-text {
     font-size: 1.3rem;
     font-weight: 900;
-    letter-spacing: 5px;
-    background: linear-gradient(135deg, #064E3B 0%, #059669 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    letter-spacing: 4px;
+    color: #064E3B;
     line-height: 1;
     font-family: 'Inter', 'Arial Black', sans-serif;
 }
@@ -887,23 +884,27 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.footer-logo-wrap {
-    display: inline-flex;
+.footer-brand {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(163, 230, 53, 0.15);
-    border-radius: 14px;
-    padding: 10px 14px;
+    gap: 0.6rem;
     margin-bottom: 1.5rem;
 }
 
 .footer-logo-img {
-    height: 68px;
+    height: 40px;
     width: auto;
     object-fit: contain;
     display: block;
-    mix-blend-mode: screen;
+    filter: brightness(1.4) drop-shadow(0 0 10px rgba(16, 185, 129, 0.25));
+}
+
+.footer-logo-text {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--white);
+    font-family: 'Inter', 'Arial Black', sans-serif;
 }
 
 .footer-tagline {
@@ -1128,7 +1129,12 @@ header.scrolled {
 
     /* --- Logo --- */
     .logo-img {
-        height: 36px;
+        height: 34px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+        letter-spacing: 3px;
     }
 
     /* --- Typography --- */
