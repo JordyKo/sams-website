@@ -390,11 +390,11 @@ nav {
 }
 
 .grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
 }
 
 .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 }
 
 .card {
@@ -783,6 +783,20 @@ nav {
     background: var(--bg-light);
 }
 
+.about-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-img-container {
+    background: var(--accent-bg);
+    height: 420px;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
 /* =============================================
    SERVICES EXPANDED
    ============================================= */
@@ -864,8 +878,6 @@ footer {
     object-fit: contain;
     margin-bottom: 1.25rem;
     display: block;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
 }
 
 .footer-tagline {
@@ -1055,6 +1067,7 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
+    /* --- Nav --- */
     .mobile-toggle {
         display: block;
     }
@@ -1070,6 +1083,7 @@ header.scrolled {
         padding: 1rem 1.5rem;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         gap: 0;
+        z-index: 999;
     }
 
     .nav-links li {
@@ -1079,6 +1093,36 @@ header.scrolled {
     .nav-links a {
         display: block;
         padding: 0.85rem 0;
+        font-size: 1rem;
+    }
+
+    /* --- Logo --- */
+    .logo-img {
+        height: 40px;
+    }
+
+    /* --- Typography --- */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* --- Sections --- */
+    section {
+        padding: 3.5rem 0;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
     }
 
     .hero-grid {
@@ -1092,44 +1136,131 @@ header.scrolled {
 
     .hero-btns {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
     }
 
     .hero-img {
         display: none;
     }
 
+    /* --- Stats --- */
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    h1 {
-        font-size: 2.25rem;
+    .impact-meter {
+        padding: 2.5rem 1.5rem;
+        border-radius: 0;
+        margin-top: -2rem;
     }
 
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    .footer-grid {
+    /* --- Cards / Grids --- */
+    .grid-2 {
         grid-template-columns: 1fr;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- About page two-column sections --- */
+    .about-two-col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-img-container {
+        height: 260px;
+        order: -1; /* Image first on mobile */
+    }
+
+    /* --- Carousel --- */
+    .hero-carousel-section {
+        padding: 3rem 0 2rem;
     }
 
     .carousel-slide-inner,
     .carousel-slide-inner.layout-featured {
-        grid-template-columns: 1fr 1fr;
-        height: 320px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 160px);
+        height: auto;
     }
 
     .carousel-slide-inner.layout-featured .slot-1 {
         grid-row: unset;
     }
 
+    /* --- Footer --- */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-logo-img {
+        height: 40px;
+    }
+
+    /* --- Quality / Policy --- */
     .policy-statement {
         padding: 2rem;
     }
 
+    .policy-pillars {
+        grid-template-columns: 1fr;
+    }
+
     .cert-grid {
         gap: 1.25rem;
+    }
+
+    .cert-placeholder {
+        width: 160px;
+        height: 200px;
+    }
+
+    /* --- Container padding --- */
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 1.75rem;
+    }
+
+    .back-to-top {
+        bottom: 1.25rem;
+        right: 1.25rem;
     }
 }
