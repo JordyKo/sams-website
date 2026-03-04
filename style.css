@@ -86,14 +86,25 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.65rem;
     text-decoration: none;
 }
 
 .logo-img {
-    height: 64px;
+    height: 46px;
     width: auto;
     object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.35rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #065F46, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
 }
 
 .nav-links {
@@ -1116,7 +1127,7 @@ header.scrolled {
 
     /* --- Logo --- */
     .logo-img {
-        height: 40px;
+        height: 36px;
     }
 
     /* --- Typography --- */
